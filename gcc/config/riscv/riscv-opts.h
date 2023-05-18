@@ -164,6 +164,12 @@ enum riscv_entity
 #define TARGET_VECTOR_ELEN_FP_64 \
   ((riscv_vector_elen_flags & MASK_VECTOR_ELEN_FP_64) != 0)
 
+#define MASK_ZVBB      (1 << 0)
+#define MASK_ZVBC      (1 << 1)
+
+#define TARGET_ZVBB      ((riscv_zvb_subext & MASK_ZVBB) != 0)
+#define TARGET_ZVBC      ((riscv_zvb_subext & MASK_ZVBC) != 0)
+
 #define MASK_ZVL32B    (1 <<  0)
 #define MASK_ZVL64B    (1 <<  1)
 #define MASK_ZVL128B   (1 <<  2)

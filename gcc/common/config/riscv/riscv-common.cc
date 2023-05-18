@@ -201,6 +201,9 @@ static const struct riscv_ext_version riscv_ext_version_table[] =
   {"zve64f", ISA_SPEC_CLASS_NONE, 1, 0},
   {"zve64d", ISA_SPEC_CLASS_NONE, 1, 0},
 
+  {"zvbb", ISA_SPEC_CLASS_NONE, 1, 0},
+  {"zvbc", ISA_SPEC_CLASS_NONE, 1, 0},
+
   {"zvl32b", ISA_SPEC_CLASS_NONE, 1, 0},
   {"zvl64b", ISA_SPEC_CLASS_NONE, 1, 0},
   {"zvl128b", ISA_SPEC_CLASS_NONE, 1, 0},
@@ -1243,6 +1246,9 @@ static const riscv_ext_flag_table_t riscv_ext_flag_table[] =
   {"zve64x",   &gcc_options::x_riscv_vector_elen_flags, MASK_VECTOR_ELEN_64},
   {"zve64f",   &gcc_options::x_riscv_vector_elen_flags, MASK_VECTOR_ELEN_FP_32},
   {"zve64d",   &gcc_options::x_riscv_vector_elen_flags, MASK_VECTOR_ELEN_FP_64},
+
+  {"zvbb",     &gcc_options::x_riscv_zvb_subext, MASK_ZVBB},
+  {"zvbc",     &gcc_options::x_riscv_zvb_subext, MASK_ZVBC},
 
   {"zvl32b",    &gcc_options::x_riscv_zvl_flags, MASK_ZVL32B},
   {"zvl64b",    &gcc_options::x_riscv_zvl_flags, MASK_ZVL64B},
